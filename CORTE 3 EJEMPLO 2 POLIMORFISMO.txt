@@ -9,7 +9,7 @@ namespace prueba_2
 
         public void Lista()
         {
-            Console.WriteLine("Resúmen del Personal: ");
+            Console.WriteLine("ResÃºmen del Personal: ");
             Console.WriteLine("-----------------------------");
             Console.WriteLine("Contratado por: " + contratista);
             Console.WriteLine("Supervisor: " + supervisor);
