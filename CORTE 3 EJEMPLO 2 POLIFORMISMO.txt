@@ -1,0 +1,58 @@
+CLASE CLASE2
+namespace prueba_2
+{
+    class clase2
+    {
+        public string contratista;
+        public string supervisor;
+        public string trabajador1, trabajador2, trabajador3;
+
+        public void Lista()
+        {
+            Console.WriteLine("Resúmen del Personal: ");
+            Console.WriteLine("-----------------------------");
+            Console.WriteLine("Contratado por: " + contratista);
+            Console.WriteLine("Supervisor: " + supervisor);
+            Console.WriteLine("Empleados: ");
+            Console.WriteLine("Trabajador: " + trabajador1);
+            Console.WriteLine("Trabajador: " + trabajador2);
+            Console.WriteLine("Trabajador: " + trabajador3 );
+        }
+
+    }
+}
+
+
+
+
+CLASE PROGRAM
+namespace prueba_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            clase2 ListaEmpleados = new clase2();
+
+            Console.WriteLine("Bienvenido, cliente. ");
+            Console.WriteLine("Rellene el siguiente formulario: ");
+
+            ListaEmpleados.Lista();
+
+            Console.WriteLine("--------------------------------------------------");
+            Console.WriteLine("Inserte datos en el orden mostrado anteriormente. ");
+
+            ListaEmpleados.contratista = Convert.ToString(Console.ReadLine());
+            ListaEmpleados.supervisor = Convert.ToString(Console.ReadLine());
+            ListaEmpleados.trabajador1 = Convert.ToString(Console.ReadLine());
+            ListaEmpleados.trabajador2 = Convert.ToString(Console.ReadLine());
+            ListaEmpleados.trabajador3 = Convert.ToString(Console.ReadLine());
+
+            Console.WriteLine("---------------------------------------------------");
+
+            Console.WriteLine("Su formulario es el siguiente: ");
+            ListaEmpleados.Lista();
+
+        }
+    }
+}
