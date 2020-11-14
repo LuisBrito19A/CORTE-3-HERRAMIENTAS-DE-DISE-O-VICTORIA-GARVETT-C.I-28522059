@@ -1,0 +1,82 @@
+CLASE CalculadoraCompleta
+namespace prueba
+{
+    class CalculadoraCompleta
+    {
+        public double a;
+        public double b;
+        public double c;
+
+        public void Calculo()
+        {
+            c = a + b;
+        }
+     
+        public void Calculo2()
+        {
+            c = a - b;
+        }
+
+        public void Calculo3()
+        {
+            c = a * b;
+        }
+       
+        public void Calculo4()
+        {
+            c = a / b;
+        }
+
+        public void Calculo5()
+        {
+            c = Math.Pow(a,b);
+        }
+
+        public void Mostrar()
+        {
+            Console.WriteLine("a={0}, b={1}, c={2}", a, b, c);
+        }
+    }
+}
+
+CLASE program 
+namespace prueba
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            CalculadoraCompleta calculadora = new CalculadoraCompleta();
+
+            Console.WriteLine("Inserte valores deseados");
+            calculadora.a = Convert.ToDouble(Console.ReadLine());
+            calculadora.b = Convert.ToDouble(Console.ReadLine());
+
+            //Muestra de los datos insertados SIN cálculo
+            calculadora.Mostrar();
+
+            Console.WriteLine("--------------------------");
+
+            Console.WriteLine("Suma");
+            calculadora.Calculo();
+            calculadora.Mostrar();
+
+            Console.WriteLine("Resta");
+            calculadora.Calculo2();
+            calculadora.Mostrar();
+
+            Console.WriteLine("Multiplicación");
+            calculadora.Calculo3();
+            calculadora.Mostrar();
+
+            Console.WriteLine("División");
+            calculadora.Calculo4();
+            calculadora.Mostrar();
+
+            Console.WriteLine("'A' elevado a la 'B'");
+            calculadora.Calculo5();
+            calculadora.Mostrar();
+
+        }
+    }
+}
