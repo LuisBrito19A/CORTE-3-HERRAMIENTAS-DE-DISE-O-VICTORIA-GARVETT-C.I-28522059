@@ -1,71 +1,76 @@
-CREATE TABLE Informaci髇_Personal (
-Informaci髇P_id INT PRIMARY KEY,
+CREATE DATABASE Sistemas
+go
+
+USE Sistemas
+go
+
+CREATE TABLE Informaci贸n_Personal (
+Informaci贸nP_id INT PRIMARY KEY,
 Nombre_Apellido VARCHAR (50),
 Carrera VARCHAR (70),
-Descripci髇 text,
+Descripci贸n text,
 );
+
+go
 
 CREATE TABLE Experiencia_Profesional (
 ExperiencaP_id INT PRIMARY KEY,
 Lugar_de_trabajo text,
-A駉s_de_actividad SMALLINT,
+A帽os_de_actividad SMALLINT,
 Cargo VARCHAR (100),
 );
-
+go
 CREATE TABLE Habilidades_Conocimientos (
 Habilidades_id INT PRIMARY KEY,
-Descripci髇_habilidades text,
+Descripci贸n_habilidades text,
 );
-
-CREATE TABLE Formaci髇_Acad閙ica (
-FAcad閙ica_id INT PRIMARY KEY,
+go
+CREATE TABLE Formaci贸n_Acad茅mica (
+FAcad茅mica_id INT PRIMARY KEY,
 Entidad VARCHAR (60),
-A駉_entrada SMALLINT,
-A駉_salida VARCHAR (12),
+A帽o_entrada SMALLINT,
+A帽o_salida VARCHAR (12),
 );
-
+go
 CREATE TABLE Redes_Sociales(
 Redes_id INT PRIMARY KEY,
 Redes_nombre VARCHAR (30),
 Redes_enlace text,
 );
-
+go
 CREATE TABLE Contactos (
 Contactos_id INT PRIMARY KEY,
 Contacto_nombre VARCHAR (50),
-Contacto_descripci髇 VARCHAR (60),
+Contacto_descripci贸n VARCHAR (60),
 );
+go
 
 
-
-INSERT INTO Informaci髇_Personal VALUES(1, 'Victoria Garvett', 'Estudiante de Ingenier韆 en Informaci髇',
-'Actualmente me encuentro en proceso de formaci髇 profesional en la Universidad Tecnol骻ica del Centro (UNITEC).
-Tengo gran inter閟 en desenvolverme en el 醨ea de desarrollo web y de software. Tengo 18 a駉s de edad.'); 
-
+INSERT INTO Informaci贸n_Personal VALUES(1, 'Victoria Garvett', 'Estudiante de Ingenier铆a en Informaci贸n',
+'Actualmente me encuentro en proceso de formaci贸n profesional en la Universidad Tecnol贸gica del Centro (UNITEC).
+Tengo gran inter茅s en desenvolverme en el 谩rea de desarrollo web y de software. Tengo 18 a帽os de edad.'); 
+go
 
 
 INSERT INTO Experiencia_Profesional VALUES (2, 'Decohelen C.A', 2020, 'Asistente de Ventas y Procesos Administrativos');
+go
 
 
+INSERT INTO Habilidades_Conocimientos VALUES (5, 'Manejo de la computadora, impresora, fotocopiadora y esc谩ner.');
+go
+INSERT INTO Contactos VALUES (12, 'N煤mero Telef贸nico', '0412-8561865');
+go
+INSERT INTO Contactos VALUES (12, 'N煤mero Telef贸nico', '0412-8561865');
 
-INSERT INTO Habilidades_Conocimientos VALUES (5, 'Manejo de la computadora, impresora, fotocopiadora y esc醤er.');
+INSERT INTO Formaci贸n_Acad茅mica VALUES (7, 'Universidad Tecnol贸gica del Centro', 2020, 'En curso');
+go
+INSERT INTO Redes_Sociales VALUES (10, 'Github', 'https://github.com/victoriagarvett');
+go 
 
+SELECT * FROM Redes_Sociales
+SELECT * FROM Formaci贸n_Acad茅mica
+SELECT * FROM Contactos
 SELECT * FROM Habilidades_Conocimientos
 
 
 
-INSERT INTO Formaci髇_Acad閙ica VALUES (7, 'Universidad Tecnol骻ica del Centro', 2020, 'En curso');
-
-SELECT * FROM Formaci髇_Acad閙ica
-
-
-
-INSERT INTO Redes_Sociales VALUES (10, 'Github', 'https://github.com/victoriagarvett');
-
-SELECT * FROM Redes_Sociales
-
-
-
-INSERT INTO Contactos VALUES (12, 'N鷐ero Telef髇ico', '0412-8561865');
-
-SELECT * FROM Contactos
